@@ -1,0 +1,22 @@
+/* Breakpoints -----------------
+// -------------------------------------------- */
+
+@mixin mobile {
+	@media (max-width: 480px) { @content; }
+}
+@mixin phone {
+	@media (max-width: 600px) { @content; }
+}
+@mixin tablet {
+	@media (max-width: 768px) { @content; }
+}
+@mixin desktop {
+	@media (max-width: 1200px) { @content; }
+}
+
+/* Effect Animation -----------------
+// -------------------------------------------- */
+
+@mixin transition($duree) {
+	transition:$duree all ease-in-out;
+}

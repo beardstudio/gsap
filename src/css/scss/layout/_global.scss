@@ -1,0 +1,46 @@
+//color of item-txt selected
+::selection {
+    background-color: red;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing:border-box
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+button{
+  border: 0;
+  cursor: pointer;
+}
+
+a, a:active, button, button:active{outline-style:none;}
+
+a{text-decoration: none;}
+
+// remove the outline in firefox
+::-moz-focus-inner {
+    border: 0;
+}
+
+// Hide an element without display none
+.hidden {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  top: 0;
+  left: -100px;
+  width: 0;
+  height: 0;
+  white-space: nowrap;
+}

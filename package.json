@@ -1,0 +1,51 @@
+{
+  "name": "beardstudio",
+  "description": "Gsap Animation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beardstudio/gsap.git"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gsap": "gulp --gulpfile gulpfile.js"
+  },
+  "author": "BeardStudio",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-update": "0.0.2",
+    "gulp-xo": "^0.21.0",
+    "jshint": "^2.9.6",
+    "jshint-stylish": "^2.2.1",
+    "postcss-advanced-variables": "^3.0.0",
+    "postcss-hexrgba": "^1.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-svgo": "^4.0.2",
+    "source-map": "^0.7.3"
+  },
+  "dependencies": {
+    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-partial-import": "^4.1.0",
+    "precss": "^4.0.0"
+  }
+}

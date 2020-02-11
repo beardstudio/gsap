@@ -1,0 +1,8 @@
+# Created by François Tacoen
+
+### Git ignore ###
+
+*.log
+/idea
+/node_modules
+/build
