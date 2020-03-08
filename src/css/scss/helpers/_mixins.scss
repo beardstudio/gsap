@@ -1,0 +1,67 @@
+/* Breakpoints -----------------
+// -------------------------------------------- */
+
+@mixin mobile {
+	@media (max-width: 480px) { @content; }
+}
+@mixin phone {
+	@media (max-width: 600px) { @content; }
+}
+@mixin tablet {
+	@media (max-width: 768px) { @content; }
+}
+@mixin tabletplus {
+	@media (max-width: 1024px) { @content; }
+}
+@mixin desktop {
+	@media (max-width: 1200px) { @content; }
+}
+
+/* Effect Animation -----------------
+// -------------------------------------------- */
+
+@mixin transition($duree) {
+	transition:$duree all ease-in-out;
+}
+
+
+/* Arrow css -----------------
+// -------------------------------------------- */
+
+@mixin triangle($direction, $color, $width){
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent;
+	@if $direction == arrowDown {
+		border-left-width: $width;
+		border-right-width: $width;
+		border-top: $width solid $color;
+	}
+	@if $direction == arrowUp {
+		border-left-width: $width;
+		border-right-width: $width;
+		border-bottom: $width solid $color;
+	}
+	@if $direction == arrowLeft {
+		border-top-width: $width;
+		border-bottom-width: $width;
+		border-right: $width solid $color;
+	}
+	@if $direction == arrowRight {
+		border-top-width: $width;
+		border-bottom-width: $width;
+		border-left: $width solid $color;
+	}
+}
+
+
+/* Truncate Txt -----------------
+// -------------------------------------------- */
+
+@mixin truncate($truncation-boundary) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

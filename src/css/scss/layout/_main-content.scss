@@ -1,0 +1,38 @@
+figure{
+  margin: 0;
+}
+
+img{
+  width: 100%;
+}
+
+.article{
+  position: relative;
+  .box{
+    figure{
+      margin: 2rem;
+      img{
+
+      }
+    }
+    .overlay{
+
+    }
+  }
+  .project-info{
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    background-color: #fff;
+    padding: 10px;
+    .small-title{
+
+    }
+    h3{
+
+    }
+    a{
+
+    }
+  }
+}

@@ -1,0 +1,118 @@
+/*color of item-txt selected*/
+::selection {
+  background: #b3d4fc;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing:border-box
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+html{
+  /*All px is convert in rem by dependencies gulp. For mobile breakpoint don't forget to change only font-size of html--there will be an impact on all content.*/
+  font-size: 16px;
+}
+
+html, body{
+  height: 100%;
+  font-family: $txtbody;
+  margin: 0;
+}
+
+fieldset{
+  border: none;
+}
+
+button{
+  border: 0;
+  cursor: pointer;
+}
+
+/* !!! Don't forget to add focus on each a,button if we remove the outline*/
+a, a:active, button, button:active{outline-style:none;}
+
+a{text-decoration: none;}
+
+/* remove the outline in firefox */
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Hide an element without display none */
+.hidden {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  top: 0;
+  left: -100px;
+  width: 0;
+  height: 0;
+  white-space: nowrap;
+}
+
+.nodisplay{
+  display: none !important;
+}
+
+.novisible{
+  opacity: 0;
+  @include transition(.3s);
+}
+
+code{
+  background-color: #d1d3d4;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0 4px;
+  font-family: Arial;
+}
+
+h1{
+  font-size: 6.4rem;
+  font-family: $heading;
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  font-size: 2rem;
+  font-family: $heading;
+  padding: 0;
+  margin: 0;
+}
+
+h3{
+  font-size: 2rem;
+  font-family: $heading;
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  font-size: .8rem;
+  font-family: $txtbody;
+  padding: 0;
+  margin: 0;
+}
+
+/* // Define different types of effects here // */
+.fx--fade {
+  animation-name: fadeInSlideUp;
+  animation-duration: .5s;
+}
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0x);
+  }
+}

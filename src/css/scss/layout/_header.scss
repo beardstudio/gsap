@@ -1,0 +1,49 @@
+.logo{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 200px;
+}
+
+header{
+  width: 100vw;
+  min-height: 400px;
+  height: 100vh;
+  color: white;
+  background-color: #326aab;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  overflow: hidden;
+  @include transition(.3s);
+
+  .headings{
+    padding-left: 40px;
+    padding-top: 80px;
+    h2{
+      font-size: 4rem;
+    }
+    h3{
+      font-size: 2rem;
+      color: #ffd803;
+      margin-bottom: 20px;
+    }
+  }
+  p{
+    font-size: 1rem;
+    padding-left: 40px;
+  }
+  @include desktop{
+
+  }
+  @include tabletplus{
+
+  }
+  @include mobile{
+
+  }
+}
