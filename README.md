@@ -14,7 +14,7 @@ Install Python (If it's necessary)
 Install Node.js
 Install Gulp in global (npm install gulp -g)
 Command line: npm install
-Command line to run: npm run gsap
+Command line to run: npm run story
 
 ````
 

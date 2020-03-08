@@ -1,0 +1,11 @@
+# Created by François Tacoen
+
+### Git ignore ###
+
+# User-specific stuff:
+/.idea
+*.log
+/node_modules
+/build/css
+/build/js
+/build/*.html

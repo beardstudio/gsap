@@ -1,43 +1,54 @@
 {
   "name": "beardstudio",
-  "description": "RefractFrameworkEuropeanParliament",
+  "description": "Story telling",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "url repository"
   },
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "story": "gulp --gulpfile gulpfile.js"
   },
-  "author": "TMK feat BeardStudio",
+  "author": "BeardStudio",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "browser-sync": "^2.26.3",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-compass": "^2.1.0",
-    "gulp-file-include": "^2.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-file-include": "^2.1.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-jshint": "^2.1.0",
     "gulp-notify": "^3.2.0",
-    "gulp-open": "^3.0.1",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "gulp-update": "0.0.2",
-    "gulp-xo": "^0.21.0",
-    "jshint": "^2.9.6",
+    "gulp-xo": "^0.24.0",
+    "jshint": "^2.11.0",
     "jshint-stylish": "^2.2.1",
+    "postcss-advanced-variables": "^3.0.0",
+    "postcss-hexrgba": "^1.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-svgo": "^4.0.2",
     "source-map": "^0.7.3"
   },
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "gulp-assetpaths": "^0.3.3",
+    "postcss-conditionals": "^2.1.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.3",
+    "postcss-partial-import": "^4.1.0",
+    "precss": "^4.0.0"
   }
 }

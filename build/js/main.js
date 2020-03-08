@@ -13,41 +13,41 @@ var defaultValues = {
   slideLeft: {
     duration: 0.8
   }
-  /*$('[data-scrollmagic]').each(function (index, elem) {
-      // Init ScrollMagic Controller
-      const scrollMagicController = new ScrollMagic();
-  
-      // Create Animations
-      let slideUp = $(".slideUp"),
-          slideRight = $(".slideRight"),
-          slideBottom = $(".slideBottom"),
-          slideLeft = $(".slideLeft");
-  
-      // Create delay
-      const delay = m => Number($(this).attr(`data-delay-${m}`)) || defaultValues[m].duration;
-  
-  
-  
-      var tl = new TimelineMax({pause: true});
-      tl
-          .fromTo(slideUp, delay('slideUp'), { y: 100, opacity: 0 }, { y: 0, opacity: 1, ease: Power4.EaseOut })
-          .fromTo(slideRight, delay('slideRight'), { x: 100, opacity: 0 }, { x: 0, opacity: 1, ease: Power4.EaseOut })
-          .fromTo(slideBottom, delay('slideBottom'), { y: -100, opacity: 0 }, { y: 0, opacity: 1, ease: Power4.EaseOut })
-          .fromTo(slideLeft, delay('slideLeft'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, ease: Power4.EaseOut })
-  
-  
-      // Create the Scene and trigger when visible
-      var scene = new ScrollScene({
-          triggerElement: elem,
-          offset: 0 /!* offset the trigger Npx below scene's top *!/
-      })
-          .setTween(tl)
-          .addTo(scrollMagicController);
-  
-  });*/
-  // Create Animations
-
 };
+/*$('[data-scrollmagic]').each(function (index, elem) {
+    // Init ScrollMagic Controller
+    const scrollMagicController = new ScrollMagic();
+
+    // Create Animations
+    let slideUp = $(".slideUp"),
+        slideRight = $(".slideRight"),
+        slideBottom = $(".slideBottom"),
+        slideLeft = $(".slideLeft");
+
+    // Create delay
+    const delay = m => Number($(this).attr(`data-delay-${m}`)) || defaultValues[m].duration;
+
+
+
+    var tl = new TimelineMax({pause: true});
+    tl
+        .fromTo(slideUp, delay('slideUp'), { y: 100, opacity: 0 }, { y: 0, opacity: 1, ease: Power4.EaseOut })
+        .fromTo(slideRight, delay('slideRight'), { x: 100, opacity: 0 }, { x: 0, opacity: 1, ease: Power4.EaseOut })
+        .fromTo(slideBottom, delay('slideBottom'), { y: -100, opacity: 0 }, { y: 0, opacity: 1, ease: Power4.EaseOut })
+        .fromTo(slideLeft, delay('slideLeft'), { x: -100, opacity: 0 }, { x: 0, opacity: 1, ease: Power4.EaseOut })
+
+
+    // Create the Scene and trigger when visible
+    var scene = new ScrollScene({
+        triggerElement: elem,
+        offset: 0 /!* offset the trigger Npx below scene's top *!/
+    })
+        .setTween(tl)
+        .addTo(scrollMagicController);
+
+});*/
+// Create Animations
+
 var slideUp = document.querySelector(".slideUp"),
     slideRight = document.querySelector(".slideRight"),
     slideDown = document.querySelector(".slideDown"),
