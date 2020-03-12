@@ -20,12 +20,6 @@ const defaultValues = {
     // Init ScrollMagic Controller
     const scrollMagicController = new ScrollMagic();
 
-    // Create Animations
-    let slideUp = $(".slideUp"),
-        slideRight = $(".slideRight"),
-        slideBottom = $(".slideBottom"),
-        slideLeft = $(".slideLeft");
-
     // Create delay
     const delay = m => Number($(this).attr(`data-delay-${m}`)) || defaultValues[m].duration;
 
