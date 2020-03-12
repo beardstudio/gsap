@@ -55,6 +55,7 @@ var slideUp = document.querySelector(".slideUp"),
     fadeOut = document.querySelector(".fadeOutBounce"); // Create delay
 //const delay = d => Number($(this).attr(`data-delay-${d}`)) || defaultValues[d].duration;
 
+var controller = new ScrollMagic.Controller();
 var tl = new TimelineMax({
   pause: true
 });
@@ -63,39 +64,92 @@ tl.from(slideLeft, delay('slideLeft'), {duration: 2, opacity: 0, x: -100});
 tl.from(slideUp, delay('slideUp'), {duration: 2, opacity: 0, y: 100});
 tl.from(slideDown, delay('slideDown'), {duration: 2, opacity: 0, y: -100});
 tl.from(fadeOut, 2, {duration: 2, opacity: 0, x: 100});*/
+// function slideEffectLeft (orderAnimation){
+//     from(slideLeft, 1, {opacity: 0, x: -100}, orderAnimation);
+// }
+// var slideLeftEffect = function () {
+//     var tl = new TimelineMax();
+//     return tl;
+// };
 
-function slideEffectLeft(orderAnimation) {
-  from(slideLeft, 1, {
+var slideLeftEffect = function slideLeftEffect(selector, delay) {
+  var tl = new TimelineMax();
+  tl.from(selector, 2, {
     opacity: 0,
     x: -100
-  }, orderAnimation);
-}
+  }, delay);
+  return tl;
+};
 
-tl.from(slideRight, 1, {
-  opacity: 0,
-  x: 100
-});
-tl.from(slideLeft, 1, {
-  opacity: 0,
-  x: -100
-});
-tl.from(slideUp, 1, {
-  opacity: 0,
-  y: 100
-});
-tl.from(slideDown, 1, {
-  opacity: 0,
-  y: -100
-});
-tl.from(fadeOut, 1, {
-  ease: Elastic.easeOut.config(.8, .8),
-  duration: 2,
-  opacity: 0,
-  scale: 0
-});
-var controller = new ScrollMagic.Controller();
+var slideRightEffect = function slideRightEffect(selector, delay) {
+  var tl = new TimelineMax();
+  tl.from(selector, 2, {
+    opacity: 0,
+    x: 100
+  }, delay);
+  return tl;
+};
+
+var slideUpEffect = function slideUpEffect(selector, delay) {
+  var tl = new TimelineMax();
+  tl.from(selector, 2, {
+    opacity: 0,
+    y: 100
+  }, delay);
+  return tl;
+};
+
+var slideDownEffect = function slideDownEffect(selector, delay) {
+  var tl = new TimelineMax();
+  tl.from(selector, 2, {
+    opacity: 0,
+    y: -100
+  }, delay);
+  return tl;
+};
+
+var fadeOutEffect = function fadeOutEffect(selector, delay) {
+  var tl = new TimelineMax();
+  tl.from(selector, 2, {
+    ease: Elastic.easeOut.config(.8, .8),
+    duration: 2,
+    opacity: 0,
+    scale: 0
+  }, delay);
+  return tl;
+}; // var slideLeftEffect = new TimelineMax()
+// .from(slideLeft, 2, {opacity: 0, x: -100}, 1);
+// var slideRightEffect = new TimelineMax()
+// .from(slideRight, 2, {opacity: 0, x: 100}, 2);
+// var slideUpEffect = new TimelineMax()
+// .from(slideUp, 2, {opacity: 0, y: 100}, 3);
+// var slideDownEffect = new TimelineMax()
+// .from(slideDown, 2, {opacity: 0, y: -100}, 4);
+// var fadeOutEffect = new TimelineMax()
+// .from(fadeOut, 2, {ease: Elastic.easeOut.config(.8, .8), duration: 2, opacity: 0, scale: 0}, 5);
+//tl.from(slideRight, 1, {opacity: 0, x: 100});
+//tl.from(slideLeft, 1, {opacity: 0, x: -100});
+//tl.from(slideUp, 1, {opacity: 0, y: 100});
+//tl.from(slideDown, 1, {opacity: 0, y: -100});
+//tl.from(fadeOut, 1, {ease: Elastic.easeOut.config(.8, .8), duration: 2, opacity: 0, scale: 0});
+
+
 var scene = new ScrollMagic.Scene({
+  triggerElement: ".header",
+  reverse: "false"
+}).setClassToggle('.header', 'effect').addIndicators({
+  name: 'effect',
+  colorStart: 'pink',
+  colorTrigger: '#fff'
+}).setTween(slideLeftEffect('.slideLeft', 1)).setTween(slideRightEffect('.slideRight', 1)).setTween(slideUpEffect('.slideUp', 2)).setTween(slideDownEffect('.slideDown', 1)).setTween(fadeOutEffect('.fadeOutBounce', 3)).addTo(controller);
+var scene1 = new ScrollMagic.Scene({
   triggerElement: ".animation",
-  triggerHook: 0,
-  duration: 1000
-}).addIndicators().addTo(controller);
+  reverse: "false"
+}).setClassToggle('.section-1', 'effect').addIndicators({
+  name: 'effect',
+  colorStart: 'pink',
+  colorTrigger: '#fff'
+}).addTo(controller);
+var scene2 = new ScrollMagic.Scene({
+  triggerElement: ".animation-1"
+}).addIndicators().setTween(tl).addTo(controller);
