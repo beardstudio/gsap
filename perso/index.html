@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html class="no-js">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>HTML blank template</title>
+        
+        <meta name="description" content="description goes here">
+
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700|Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            html, body {
+                overflow-x: hidden;
+            }
+            body {
+                font-family: Comfortaa,arial,sans-serif;
+                font-size: 0.9rem;
+                line-height: 1.2rem;
+            }
+            :focus, :focus-within {
+                
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            header {
+                display: block;
+                height: 100vh;
+                padding: 50px;
+            }
+            header .logo {
+                background-image: url(img/logo-parliament-w.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                display: block;
+                width: 200px;
+                height: 111px;
+                text-indent: -999rem;
+                font-size: 1px;
+            }
+            .bg-header {
+                background-color: #326aab;
+                background-image: -webkit-gradient(linear,left bottom,left top,from(#1e3c72),color-stop(1%,#1e3c72),to(#2a5298));
+                background-image: linear-gradient(0deg,#1e3c72 0,#1e3c72 1%,#2a5298);
+                color: #fff;
+            }
+            .bg-header h1 {
+                color: #ffffff;
+                font-size: 4rem;
+                line-height: 4.4rem;
+            }
+            .bg-header h2 {
+                color: #ffd803;
+                font-size: 2rem;
+                line-height: 2.2rem;
+            }
+            .bg-header p {
+                margin: 20px 0;
+                font-weight: bold;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+            h2 {
+                color: #333;
+                font-size: 2rem;
+            }
+            .chapo {
+                color: #666;
+                font-size: 1.4rem;
+            }
+            footer {
+                display: block;
+                text-align: center;
+                height: 100px;
+                line-height: 100px;
+                font-size: 0.8rem;
+            }
+            
+            /* **** // Motion // **** */
+            
+                /* // If no JS // */
+                .no-js .slideUp, .no-js .slideDown, .no-js .slideLeft, .no-js .slideRight, .no-js .fade, .no-js .zoomInOut {
+                    opacity: 1;
+                }
+                
+                /* // If JS // */
+                .js .slideUp {
+                    opacity: 0;
+                    transform: translateY(5em);
+                    transition: transform 2s .25s cubic-bezier(0,1,.3,1), opacity .3s .25s ease-out;
+                    will-change: transform, opacity;
+                }
+                .js .slideUp.is-visible {
+                    opacity: 1;
+                    transform: translateY(0em);
+                }
+                .js .slideDown {
+                    opacity: 0;
+                    transform: translateY(-5em);
+                    transition: transform 2s .25s cubic-bezier(0,1,.3,1), opacity .3s .25s ease-out;
+                    will-change: transform, opacity;
+                }
+                .js .slideDown.is-visible {
+                    opacity: 1;
+                    transform: translateY(0em);
+                }
+                .js .fade {
+                    opacity: 0;
+                    transition:  opacity .5s .5s;
+                    will-change: opacity;
+                }
+                .js .fade.is-visible {
+                     opacity: 1;
+                }
+                .js .slideLeft {
+                    opacity: 0;
+                    transform: translateX(-10em);
+                    transition: transform 2s .25s cubic-bezier(0,1,.3,1), opacity .3s .25s ease-out;
+                    will-change: transform, opacity;
+                }
+                .js .slideLeft.is-visible {
+                    opacity: 1;
+                    transform: translateX(0em);
+                }
+                .js .slideRight {
+                    opacity: 0;
+                    transform: translateX(10em);
+                    transition: transform 2s .25s cubic-bezier(0,1,.3,1), opacity .3s .25s ease-out;
+                    will-change: transform, opacity;
+                    }
+                .js .slideRight.is-visible {
+                    opacity: 1;
+                    transform: translateX(0em);
+                }
+                .js .zoomInOut {
+                    opacity: 0;
+                    transform: scale(2,2);
+                    transition: transform 2s .25s cubic-bezier(0,1,.3,1), opacity .3s .25s ease-out;
+                    will-change: transform, opacity;
+                    }
+                .js .zoomInOut.is-visible {
+                    opacity: 1;
+                    transform: scale(1,1);
+                }
+                
+                /* **** // STRUCTURE // **** */
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                }
+                .row .col {
+                    align-items: center;
+                }
+                .row .col figure {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .row .col figure img {}
+                .w-30 {
+                    width: 30%;
+                }
+                .img-full {
+                    width: 100%;
+                    height: auto;
+                }
+                .w-40 {
+                    width: 40%;
+                }
+                .w-50 {
+                    width: 50%;
+                }
+                .w-60 {
+                    width: 60%;
+                }
+                .w-70 {
+                    width: 70%;
+                }
+                .w-80 {
+                    width: 80%;
+                }
+                .w-90 {
+                    width: 90%;
+                }
+                .w-100 {
+                    width: 100%;
+                }
+                .p-10 {
+                    padding: 10px;
+                }
+                .p-20 {
+                    padding: 20px;
+                }
+                .p-30 {
+                    padding: 30px;
+                }
+                .p-40 {
+                    padding: 40px;
+                }
+                .p-50 {
+                    padding: 50px;
+                }
+                .m-10 {
+                    margin: 10px;
+                }
+                .m-20 {
+                    margin: 20px;
+                }
+                .m-30 {
+                    margin: 30px;
+                }
+                .m-40 {
+                    margin: 40px;
+                }
+                .m-50 {
+                    margin: 50px;
+                }
+                .bg-white {
+                    background-color: #ffffff;
+                    color: #000000;
+                }
+                .bg-ltgrey {
+                    background-color: #dddddd;
+                    color: #000000;
+                }
+                .bg-dkgrey {
+                    background-color: #666666;
+                    color: #ffffff;
+                }
+                .bg-black {
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+                .bg-blue {
+                    background-color: #326aab;
+                    color: #ffffff;
+                }
+
+                /* **** // Media Queries // **** */
+                @media screen and (max-width: 740px){
+                    .row {
+                        display: flex;
+                        flex-direction: column;
+
+                    }
+                    .row .col {
+                        align-items: center;
+                        width: 100%;
+                    }
+                }
+            
+                /* **** // Loader // **** */
+                #loader-wrapper {
+                  position:fixed;
+                  top:0;
+                  left:0;
+                  width:100%;
+                  height:100%;
+                  z-index:1000;
+                }
+                #loader {
+                  display:block;
+                  position: relative;
+                  top:50%;
+                  left:50%;
+                  width:150px;
+                  height:150px;
+                  margin:-75px 0 0 -75px;
+                  border: 10px dotted transparent;
+                  border-top-color: #ffd803;
+                  border-radius:100%;
+                  -webkit-animation: spin 2s linear infinite;
+                          animation: spin 2s linear infinite;
+                  z-index:1001;
+                }
+                #loader:before {
+                  content:"";
+                  position: absolute;
+                  top:5px;
+                  left:5px;
+                  right:5px;
+                  bottom:5px;
+                  border: 10px dotted transparent;
+                  border-top-color: #326aab;
+                  border-radius:100%;
+                  -webkit-animation: spin 3s linear infinite;
+                          animation: spin 3s linear infinite;
+                }
+                #loader:after {
+                  content:"";
+                  position: absolute;
+                  top:20px;
+                  left:20px;
+                  right:20px;
+                  bottom:20px;
+                  border: 10px dotted transparent;
+                  border-top-color: red;
+                  border-radius:100%;
+                  -webkit-animation: spin 1.5s linear infinite;
+                          animation: spin 1.5s linear infinite;
+                }
+                @-webkit-keyframes spin {
+                  0%   { 
+                    -webkit-transform: rotate(0deg); 
+                      -ms-transform: rotate(0deg); 
+                          transform: rotate(0deg);
+                  }
+                  100% { 
+                    -webkit-transform: rotate(360deg); 
+                      -ms-transform: rotate(360deg); 
+                          transform: rotate(360deg);
+                  }
+                }
+                @keyframes spin {
+                  0%   { 
+                    -webkit-transform: rotate(0deg); 
+                      -ms-transform: rotate(0deg); 
+                          transform: rotate(0deg);
+                  }
+                  100% { 
+                    -webkit-transform: rotate(360deg); 
+                      -ms-transform: rotate(360deg); 
+                          transform: rotate(360deg);
+                  }
+                }
+
+                #loader-wrapper .loader-section {
+                  position:fixed;
+                  top:0;
+                  background:#ffffff;
+                  width:51%;
+                  height:100%;
+                  z-index:1000;
+                }
+
+                #loader-wrapper .loader-section.section-left {
+                  left:0;
+                }
+                #loader-wrapper .loader-section.section-right {
+                  right:0;
+                }
+
+                /* Loaded Styles */
+                .loaded #loader-wrapper .loader-section.section-left {
+                  transform: translateX(-100%);
+                  transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
+                }
+                .loaded #loader-wrapper .loader-section.section-right {
+                  transform: translateX(100%);
+                  transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
+                }
+                .loaded #loader {
+                  opacity: 0;
+                  transition: all 0.3s ease-out;
+                }
+                .loaded #loader-wrapper {
+                  visibility: hidden;
+                  transform:translateY(-100%);
+                  transition: all 0.3s 1s ease-out;
+                }
+            
+        </style>
+        
+    </head>
+    
+<body onload="init()">
+    
+<!-- Preloader -->
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+ <!-- fin preloader -->
+  
+<!-- Content site -->
+<header class="bg-header">
+    <div class="row">
+        <div class="logo zoomInOut show-on-scroll">Logo European Parliament</div>
+    </div>
+    <div class="row">
+        <div class="col w-40">
+            <h1 class="fade show-on-scroll">Story telling</h1>
+            <h2 class="fade show-on-scroll">European chart</h2>
+            <p class="fade show-on-scroll">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col w-60">
+            <img src="img/chart-2.png" alt="" class="zoomInOut show-on-scroll" />
+        </div>
+    </div>
+</header>
+    
+<br>
+    
+<h2 class="slideRight show-on-scroll m-30">title of the page</h2>
+
+<p class="chapo slideRight show-on-scroll m-30">This is an animated shapo</p>    
+ 
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    
+<div class="row slideUp show-on-scroll m-30">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+  
+<div class="row">
+    <div class="slideLeft show-on-scroll col w-50 bg-ltgrey">
+        <figure>
+            <img src="img/img01.jpg" alt="" class="img-full" />
+        </figure>
+    </div>
+    <div class="slideRight show-on-scroll col w-50 p-50 bg-ltgrey">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+    
+<div class="row p-40">
+    <div class="slideUp show-on-scroll col w-60 p-50 bg-blue">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="slideRight show-on-scroll col w-40 bg-dkgrey">
+        <figure>
+            <img src="img/img01.jpg" alt="" class="img-full" />
+        </figure>
+    </div>
+</div>
+    
+    
+<footer class="bg-black fade show-on-scroll">&copy 2020 This is the footer all rights reserved.</footer>
+
+  
+<script>
+    
+/* ************************ */
+/* **** Preloader site **** */
+/* ************************ */    
+
+//For Live Projects
+window.addEventListener('load',function(){
+  document.querySelector('body').classList.add("loaded")  
+});
+
+ /* **************************************** */  
+/* **** Detect if JS is ENABLED or NOT **** */
+/* **************************************** */  
+    
+document.documentElement.className = document.documentElement.className.replace("no-js","js");   
+
+/* ******************************** */  
+/* **** SMOOTH / EASING SCROLL **** */
+/* ******************************** */  
+    
+function init(){
+	new SmoothScroll(document,120,12)
+}
+
+function SmoothScroll(target, speed, smooth) {
+	if (target === document)
+		target = (document.scrollingElement 
+              || document.documentElement 
+              || document.body.parentNode 
+              || document.body) // cross browser support for document scrolling
+      
+	var moving = false
+	var pos = target.scrollTop
+  var frame = target === document.body 
+              && document.documentElement 
+              ? document.documentElement 
+              : target // safari is the new IE
+  
+	target.addEventListener('mousewheel', scrolled, { passive: false })
+	target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
+
+	function scrolled(e) {
+		e.preventDefault(); // disable default scrolling
+
+		var delta = normalizeWheelDelta(e)
+
+		pos += -delta * speed
+		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+
+		if (!moving) update()
+	}
+
+	function normalizeWheelDelta(e){
+		if(e.detail){
+			if(e.wheelDelta)
+				return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
+			else
+				return -e.detail/3 // Firefox
+		}else
+			return e.wheelDelta/120 // IE,Safari,Chrome
+	}
+
+	function update() {
+		moving = true
+    
+		var delta = (pos - target.scrollTop) / smooth
+    
+		target.scrollTop += delta
+    
+		if (Math.abs(delta) > 0.5)
+			requestFrame(update)
+		else
+			moving = false
+	}
+
+	var requestFrame = function() { // requestAnimationFrame cross browser
+		return (
+			window.requestAnimationFrame ||
+			window.webkitRequestAnimationFrame ||
+			window.mozRequestAnimationFrame ||
+			window.oRequestAnimationFrame ||
+			window.msRequestAnimationFrame ||
+			function(func) {
+				window.setTimeout(func, 1000 / 50);
+			}
+		);
+	}()
+}
+
+
+/* ************************** */    
+/* **** MOTION ON SCROLL **** */
+/* ************************** */
+    
+// Detect request animation frame
+        var scroll = window.requestAnimationFrame ||
+                     // IE Fallback
+                     function(callback){ window.setTimeout(callback, 1000/60)};
+        var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+
+        function loop() {
+
+            Array.prototype.forEach.call(elementsToShow, function(element){
+              if (isElementInViewport(element)) {
+                element.classList.add('is-visible');
+              } else {
+                //element.classList.remove('is-visible');
+              }
+            });
+
+            scroll(loop);
+        }
+
+        // Call the loop for the first time
+        loop();
+
+        // Helper function from: http://stackoverflow.com/a/7557433/274826
+        function isElementInViewport(el) {
+          // special bonus for those using jQuery
+          if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
+          }
+          var rect = el.getBoundingClientRect();
+          return (
+            (rect.top <= 0
+              && rect.bottom >= 0)
+            ||
+            (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+            ||
+            (rect.top >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+          );
+        }
+    
+</script>
+
+</body>
+</html>
